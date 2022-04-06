@@ -16,3 +16,7 @@ class Pub:
         drink = self.find_drink_by_name(name)
         customer.reduce_money(drink.price)
         self.increase_till(drink.price)
+ 
+    def can_drink(self, age):
+        if age >= 18:
+            return True

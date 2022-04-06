@@ -6,7 +6,7 @@ from src.drinks import *
 
 class TestDrink(unittest.TestCase):
     def setUp(self):
-        self.drink = Drinks("Edinburgh Gin", 3.90)
+        self.drink = Drink("Edinburgh Gin", 3.90)
 
     # @unittest.skip("-")
     def test_find_drink_name(self):
