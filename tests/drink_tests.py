@@ -2,3 +2,14 @@ import unittest
 from src.pub import*
 from src.customers import *
 from src.drinks import *
+
+
+class TestDrink(unittest.TestCase):
+    def setUp(self):
+        self.drink = Drinks("Edinburgh Gin", 3.90)
+
+    # @unittest.skip("-")
+    def test_find_drink_name(self):
+        self.assertEqual("Edinburgh Gin", self.drink.name)
+
+
