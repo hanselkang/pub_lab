@@ -5,3 +5,5 @@ class Customers:
 
     def reduce_money(self, amount):
         self.wallet -= amount
+
+    

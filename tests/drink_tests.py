@@ -12,4 +12,5 @@ class TestDrink(unittest.TestCase):
     def test_find_drink_name(self):
         self.assertEqual("Edinburgh Gin", self.drink.name)
 
-
+    def test_drink_price(self):
+        self.assertEqual(3.90,self.drink.price)

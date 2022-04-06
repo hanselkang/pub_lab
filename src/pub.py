@@ -12,7 +12,7 @@ class Pub:
     def increase_till(self, amount):
         self.till += amount
 
-    def buy_a_drink(self, drink):
-        drink_name = self.find_drink_by_name(drink)
-        drink.reduce_money(drink_name.price)
-        self.increase_till(drink_name.price)
+    def buy_a_drink(self, name, customer):
+        drink = self.find_drink_by_name(name)
+        customer.reduce_money(drink.price)
+        self.increase_till(drink.price)
