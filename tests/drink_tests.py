@@ -1,7 +1,8 @@
 import unittest
 from src.pub import*
-from src.customers import *
-from src.drinks import *
+from src.customer import *
+from src.drink import *
+from src.food import *
 
 
 class TestDrink(unittest.TestCase):
