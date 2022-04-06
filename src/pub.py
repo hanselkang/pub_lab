@@ -12,11 +12,22 @@ class Pub:
     def increase_till(self, amount):
         self.till += amount
 
+    def can_drink(self, customer):
+        return customer.age >= 18
+
+        
+    def check_drunkenness(self, customer):
+        not_drunk = True
+        if customer.drunkenness > 5:
+            not_drunk = False
+        return not_drunk
+
     def buy_a_drink(self, name, customer):
+        self.can_drink(customer)
+        self.check_drunkenness(customer)
         drink = self.find_drink_by_name(name)
         customer.reduce_money(drink.price)
         self.increase_till(drink.price)
+        customer.drunkenness += drink.alcohol_level
  
-    def can_drink(self, age):
-        if age >= 18:
-            return True
+
